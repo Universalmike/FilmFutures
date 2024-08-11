@@ -167,10 +167,10 @@ if movie_title:
 type_ = st.selectbox('Type:', types)
 
     
-submit_button = st.form_submit_button(label='Predict')
+submit_button = st.button('Predict')
 
 if submit_button:
-    if not all([title, release_date, type_, age_certification, runtime, genres, production_countries]):
+    if not all([movie_title, release_date, type_, age_certification, runtime, genres, production_countries]):
         st.warning('Please enter all features for the movie.')
     else:
         input_data = [{
@@ -183,7 +183,7 @@ if submit_button:
         prediction = predict_imdb_score(input_data)[0]
         st.markdown(f"""
         <div class="movie-input">
-            <p>Title: {title}</p>
+            <p>Title: {movie_title}</p>
             <p>Release Date: {release_date}</p>
             <p>Predicted IMDb score: {prediction:.2f}</p>
         </div>
