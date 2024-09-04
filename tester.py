@@ -3,31 +3,9 @@ import pandas as pd
 import plotly.express as px
 import pickle
 import requests
+from Ddetails import movie_details, movie_info, blog_title, blog_details
 
 types = ['MOVIE', 'SHOW']
-Cuckoo = (f"Stars: Hunter Schafer, Jan Bluthardt, Marton Csokas\n\n"
-f"Reluctantly, 17-year-old Gretchen leaves her American home to live with her father, who has just moved into a resort in the German Alps with his new family. Arriving at their future residence, they are greeted by Mr. König, her father's boss, who takes an inexplicable interest in Gretchen's mute half-sister Alma. Something doesn't seem right in this tranquil vacation paradise. Gretchen is plagued by strange noises and bloody visions until she discovers a shocking secret that also concerns her own family.\n(credit: IMDB)")
-
-
-The_Union = (f"Stars:  Mark Walhberg, Halle Berry.\n\n"
-f"Mike (Wahlberg) is happy living a simple life as a construction worker in his native New Jersey –– until his long-lost high school sweetheart, Roxanne (Berry), shows up with more on her mind than romance. Knowing he’s the right man for the job, she recruits Mike on a dangerous intelligence mission in Europe that thrusts them back together into a world of spies and high-speed car chases, with sparks flying along the way (credit: Netflix)")
-
-wolf = (f"Stars: Sarah Georgina, Elizabeth Nabben, Jennifer Saunders.\n\n"
-f"Heroic poodle Freddy Lupin has everything it takes to lead his werewolf pack. Except respect. If only he were more... wolfish. But when a wayward wish transforms him into a werewolf and deposits a mischievous moon sprite on earth, Freddy must restore the cosmic order before earth and moon collide. Oops. One thing's for sure - Freddy will never question being a poodle again (cred: IMDB)")
-
-ninenty_two = (f"Cast: Ray Liotta, Scott Eastwood, Tyrese Gibson\n\n"
-f"In 1992, Mercer (Gibson) is desperately trying to rebuild his life and relationship with his son (Christopher A'mmanuel) amidst the turbulent 1992 L.A. uprising following the Rodney King verdict. Across town, another father and son (Liotta and Scott Eastwood) put their own strained relationship to the test as they plot a dangerous heist to steal catalytic converters, which contain valuable platinum, from the factory where Mercer works. As tensions rise in Los Angeles and chaos erupts, both families reach their boiling points when they collide. (credit: IMDD - Lionsgate)")
-
-Incoming = (f"Cast: Raphael Alejandro, Bobby Cannavale, Kaitlin Olson\n\n"
-f"Four freshmen navigate the terrors of adolescence at their first-ever high school party (credit: IMDB)")
-
-Impact = "Movies have a profound impact on society, shaping cultural norms, influencing public opinion, and reflecting social issues.\n They serve as a powerful medium for storytelling, bringing diverse perspectives and fostering empathy.\nThrough their portrayal of characters, conflicts, and resolutions, films can inspire change, challenge stereotypes, and raise awareness about critical topics.\nAdditionally, movies offer a shared experience that unites audiences, sparking conversations and collective emotions.\nIn essence, cinema not only entertains but also educates and motivates, leaving a lasting imprint on societal values and individual lives."
-print(Impact)
-
-union = "Netflix's upcoming movie, The Union, promises to be an exhilarating addition to its action-thriller lineup. Starring Mark Wahlberg and Halle Berry, the film follows two ex-special forces operatives who reunite to tackle a high-stakes mission. With Wahlberg's charisma and Berry's fierce determination, their on-screen chemistry is set to captivate audiences. Directed by a renowned filmmaker known for crafting edge-of-your-seat narratives, The Union combines intense action sequences, gripping drama, and unexpected twists. Fans can anticipate a roller-coaster ride of emotions and adrenaline, making it a must-watch for thriller enthusiasts. Stay tuned for its release date and get ready for an unforgettable cinematic experience."
-
-Dune = "Dune: Part 2 continues the epic saga of Arrakis, delivering a breathtaking sequel that surpasses its predecessor in every way. Directed by Denis Villeneuve, the film masterfully adapts Frank Herbert's complex narrative, delving deeper into the political intrigue and mystical elements of the Dune universe.Timothée Chalamet returns as Paul Atreides, now embracing his destiny as the prophesied leader. His performance is both commanding and nuanced, capturing the weight of his character's responsibilities. Zendaya’s role as Chani is expanded, offering a compelling portrayal of strength and resilience. The ensemble cast, including Rebecca Ferguson, Oscar Isaac, and Javier Bardem, adds depth and gravitas to the story.Visually, Dune: Part 2 is a spectacle. The sweeping desert landscapes and intricate set designs are brought to life with stunning cinematography. Hans Zimmer’s score complements the visuals perfectly, enhancing the film's epic scale and emotional impact.The film excels in balancing grandiose action sequences with intimate character moments. The climactic battles are intense and meticulously choreographed, while the quieter scenes explore themes of power, betrayal, and destiny.In conclusion, Dune: Part 2 is a cinematic triumph that solidifies the franchise’s place in sci-fi history. It’s a must-watch for fans and newcomers alike, promising a thrilling, thought-provoking experience."
-
 
 with open("movie-imdb-score-predictor2", "rb") as f:
     model = pickle.load(f)
@@ -192,11 +170,11 @@ if submit_button:
 # Upcoming movies
 st.markdown("<h2 id='upcoming-movies'>Upcoming Movies</h2>", unsafe_allow_html=True)
 upcoming_movies = [
-    {'title': '1. CUCKOO (August 9th). Type: MOVIE. Age Rated: R. Runtime: 84m(1h24m). Genre(s): horror, mystery, thriller. Countries: Germany, United States', 'content': Cuckoo},
-    {'title': '2. THE UNION (August 16). Type: MOVIE. Age Rated: R. Runtime: Unknown. Genre(s): thriller, action. Country: United States', 'content':  The_Union},
-    {'title': '3. 200% wolf (August 8). Type: MOVIE. Age Rated: PG. Runtime: 98m(1h38m). Genre(s): animation, family. Countries: Australia, Germany, Spain, Mexico.', 'content': wolf},
-    {'title': '4. 1992 (August 30th). Type: MOVIE. Age Rated: R. Runtime: Unknown. Genre(s): action, drama, thriller. Country: United Stats', 'content': ninenty_two},
-    {'title': '5. Incoming (August 23). Type: MOVIE. Age Rated: R. Runtime: Unknown. Genre(s): comedy. Country: United States', 'content': Incoming}
+    {'title': movie_details(1), 'content': movie_info(1)},
+    {'title': movie_details(2), 'content':  movie_info(2)},
+    {'title': movie_details(3), 'content': movie_info(3)},
+    {'title': movie_details(4), 'content': movie_info(4)},
+    {'title': movie_details(5), 'content': movie_info(5)}
 ]
 for movie in upcoming_movies:
     if st.button(movie['title']):
@@ -223,9 +201,9 @@ st.plotly_chart(fig)
 # Blog section
 st.markdown("<h2 id='blog'>Blog</h2>", unsafe_allow_html=True)
 blogs = [
-    {'title': 'The Impact of Movies on Society', 'content': Impact},
-    {'title': 'The Union: A Thrilling New Netflix Movie Starring Mark Wahlberg and Halle Berry', 'content': union},
-    {'title': 'Dune: Part 2 - A Cinematic Triumph', 'content': Dune}
+    {'title': blog_title(1), 'content': blog_details(1)},
+    {'title': blog_title(2), 'content': blog_details(2)},
+    {'title': blog_title(3), 'content': blog_details(3)}
 ]
 for blog in blogs:
     if st.button(blog['title']):
@@ -237,7 +215,7 @@ st.markdown(
     """
     <div class="contact-us">
         <p>For any inquiries, please email us at: michaelologungbara@gmail.com</p>
-        <p>copyright: supermic</p>
+        <p>copyright: michael ologungbara</p>
     </div>
     """,
     unsafe_allow_html=True
