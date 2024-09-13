@@ -23,7 +23,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/Universalmike/FilmFutures.git
+git clone https://github.com/Universalmike/ML.git
 cd FilmFutures
 Install the required Python packages:
 
@@ -32,7 +32,9 @@ Copy code
 pip install -r requirements.txt
 Set up the API key:
 
+
 You need to have an API key from TMDb. Sign up for a TMDb API key.
+
 
 Once you have the API key, add it to your Streamlit app script:
 
@@ -55,7 +57,9 @@ API Reference
 This app fetches data from The Movie Database (TMDb) API. Below is a basic outline of how the data is fetched:
 
 **Search Movie:** The app sends a request to the /search/movie endpoint with the movie title.
+
 **Movie Details:** After retrieving the movie ID from the search results, the app fetches detailed information from the /movie/{movie_id} endpoint.
+
 **For more details on the TMDb API, visit TMDb API Documentation.**
 
 **Contributing**
@@ -69,9 +73,11 @@ Push to the branch (git push origin feature/YourFeature).
 Open a pull request.
 
 **License**
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 **Acknowledgements**
 
 **Streamlit** - The framework used to build the web app.
+
 **The Movie Database (TMDb)** - For providing the API used to fetch movie data.
