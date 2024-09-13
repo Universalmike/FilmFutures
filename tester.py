@@ -214,7 +214,7 @@ st.markdown("<h2 id='contact-us'>Contact Us</h2>", unsafe_allow_html=True)
 st.markdown(
     """
     <div class="contact-us">
-        <p>For any inquiries, please email us at: michaelologungbara@gmail.com</p>
+        <p>For any inquiries, please email us at: michaelologungbara@gmail.com or call +234 803 722 1447</p>
         <p>copyright: michael ologungbara</p>
     </div>
     """,
