@@ -16,20 +16,26 @@ Demo
 To run this project locally, you'll need to have the following installed on your system:
 
 Python 3.7+
+
 Streamlit
+
 requests library
+
 Installation
 Clone the repository:
 
 bash
+
 Copy code
 git clone https://github.com/Universalmike/ML.git
 cd FilmFutures
+
 Install the required Python packages:
 
 bash
 Copy code
 pip install -r requirements.txt
+
 Set up the API key:
 
 
@@ -39,14 +45,21 @@ You need to have an API key from TMDb. Sign up for a TMDb API key.
 Once you have the API key, add it to your Streamlit app script:
 
 python
+
 Copy code
+
 api_key = 'your_api_key_here'
+
 Run the Streamlit app:
 
 bash
+
 Copy code
+
 streamlit run app.py
+
 Replace app.py with the name of your Streamlit script.
+
 
 **Usage**
 
