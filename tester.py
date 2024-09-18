@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+from dotenv import load_dotenv
 import pandas as pd
 import plotly.express as px
 import pickle
@@ -7,6 +9,7 @@ from Ddetails import movie_details, movie_info, blog_title, blog_details
 
 types = ['MOVIE', 'SHOW']
 
+#load the model
 with open("movie-imdb-score-predictor2", "rb") as f:
     model = pickle.load(f)
 
@@ -15,8 +18,11 @@ def predict_imdb_score(input_data):
     input_df = pd.DataFrame(input_data)
     return model.predict(input_df)
 
-# TMDB API KEY
-api_key = '172555f2b8dc9d7b74e3ddbbe0b7160e'
+#load the .env file
+load_dotenv()
+
+#Retrieve api key
+api_key = os.getenv("api_key")
 
 # Function to get movie details from TMDb
 def get_movie_details(movie_title):
