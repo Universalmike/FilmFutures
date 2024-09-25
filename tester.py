@@ -193,7 +193,7 @@ for movie in upcoming_movies:
 st.markdown("<h2 id='top-rated-movies'>Top Rated Movies in Each Country</h2>", unsafe_allow_html=True)
 country_movie_data = [
     {'country': 'USA', 'movies': [{'title': 'Dune: Part Two', 'rating': 8.6}, {'title': 'Furiosa: A Mad Max Saga', 'rating': 7.7}, {'title': 'Deadpool & Wolverine', 'rating': 8.0}, {'title': 'The Substance', 'rating': 8.0}, {'title': 'Transformers One', 'rating': 7.9}]},
-    {'country': 'UK', 'movies': [{'title': 'Monkey Man', 'rating': 6.9}, {'title': 'Kill', 'rating': 7.9}. {'title': 'Alien: Romulus', 'rating': 7.4}, {'title': 'Kneecap', 'rating': 7.6}, {'title': 'Supacell', 'rating': 7.0}]},
+    {'country': 'UK', 'movies': [{'title': 'Monkey Man', 'rating': 6.9}, {'title': 'Kill', 'rating': 7.9}, {'title': 'Alien: Romulus', 'rating': 7.4}, {'title': 'Kneecap', 'rating': 7.6}, {'title': 'Supacell', 'rating': 7.0}]},
     {'country': 'Nigeria', 'movies': [{'title': 'The Silent Intruder', 'rating': 9.4}, {'title': 'Funmilayo Ransome-Kuti', 'rating': 8.7}, {'title': "All's Fair In Love", 'rating': 6.4}, {'title': 'Japa', 'rating': 7.3}]}
 ]
 country_index = st.number_input('Select Country Index:', min_value=0, max_value=len(country_movie_data)-1, value=0)
