@@ -66,8 +66,8 @@ def blog_details(blogs):
             "Leading the team is Eva Rook, an enigmatic mastermind played by Ana de Armas, who brings her A-game in this role filled with cunning, charisma, and unexpected depth. The crew must navigate a maze of shifting sand dunes, deceptive mirages, and ruthless mercenaries guarding the treasure. As they delve deeper into the fortress, deadly traps and unforeseen betrayals challenge their resolve, pushing each member to confront their own personal demons."
             "With Henry Cavill, Rami Malek, and Lupita Nyong’o adding their talents to the cast, The Mirage Heist offers a blend of intricate heist elements and heart-stopping action sequences set against the exotic backdrop of the desert. Guy Ritchie’s signature style of fast-paced storytelling and sharp dialogue ensures this film will be a rollercoaster ride from start to finish."
             "Why You Should Watch:\n\n"
-            "- A thrilling plot with complex characters and high stakes."
-            "- Exhilarating action scenes set in stunning desert landscapes."
+            "- A thrilling plot with complex characters and high stakes. \n\n"
+            "- Exhilarating action scenes set in stunning desert landscapes. \n\n"
             "- An exceptional cast delivering top-notch performances."
         )
     elif blogs == 3:
@@ -76,8 +76,8 @@ def blog_details(blogs):
             "With groundbreaking technology at their disposal, they must navigate treacherous galaxies, uncover hidden worlds, and unravel ancient secrets to prevent an interstellar catastrophe. But with tensions running high and trust becoming a rare commodity among the crew, Captain Corvus faces the ultimate test of leadership and courage."
             "Directed by Denis Villeneuve, known for his visually spectacular films and gripping storytelling, The Astral Crusade promises an unforgettable cinematic experience, combining breathtaking visual effects with a compelling narrative of survival and discovery. The movie also features Michael B. Jordan, Idris Elba, and Oscar Isaac, making it one of the most anticipated releases of the year."
             "Why You Should Watch:\n\n" 
-            "- Stunning visual effects and state-of-the-art CGI."
-            "- A suspenseful storyline filled with unexpected twists."
+            "- Stunning visual effects and state-of-the-art CGI. \n\n"
+            "- A suspenseful storyline filled with unexpected twists. \n\n"
             "- A powerhouse cast that delivers intense and memorable performances."
         )
 
