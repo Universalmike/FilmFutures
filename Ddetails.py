@@ -1,45 +1,48 @@
 def movie_details(part):
     if part == 1:
-        return "1. Gods Not Dead 5: In God We Trust (September 12th). MOVIE. PG. 1h36m. Drama, Faith."
+        return "1. Joker: Folie à Deux Movie (October 4th). R. 2h18m. Crime, Drama, Thriller."
     elif part == 2:
-        return "2. Transformers One (September 18). MOVIE. PG. 1h44m. Action, Sci-Fi."
+        return "2. Hellboy: The Crooked Man (September 27). R. 1h39m. Action, Horror."
     elif part == 3:
-        return "3. My Old Ass (September 13). MOVIE. R. 1h29m. Comedy, Drama."
+        return "3. Farmer's Bride (September 27). 1h29m. Drama."
     elif part == 4:
-        return "4. Hauntology (September 17). MOVIE. R. 1h40m. Horror."
+        return "4. A Night in 2005 (October 11). 1h40m. Drama."
     elif part == 5:
-        return "5. Never Let Go (September 20). MOVIE. R. 1h41m. Thriller, Suspense, Horror."
+        return "5. Venom: The Last Dance (October 25). Action, Adventure, Sci-Fi."
     else:
         return "This is everything"
 
 def movie_info(parts):
     if parts == 1:
         return (
-            "Stars: Dean Cain, Isaiah Washington, Ray Wise, David A.R. White\n\n"
-            "With the help of a skilled political strategist, Reverend David Hill runs for political office to preserve religious freedom and heal the divide in his country."
+            "Stars: Joaquin Pheonix, Lady Gaga \n\n"
+            "“Joker: Folie À Deux” finds Arthur Fleck institutionalized at Arkham awaiting trial for his crimes as Joker. While struggling with his dual identity, Arthur not only stumbles upon true love, but also finds the music that's always been inside him."
+            "(credit: IMDB)"
         )
     elif parts == 2:
         return (
-            "Stars: Chris Hemsworth, Scarlett Johansson, Valerii An, Keegan-Michael Key, Steven Spielberg\n\n"
-            "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but once were friends bonded like brothers who changed the fate of Cybertron forever."
+            "Stars: Jack Kesy, Jeffery White, Leah McNamara\n\n"
+            "Hellboy and a rookie B.P.R.D. agent in the 1950s are sent to the Appalachians, where they discover a remote community dominated by witches and led by the sinister local demon, the Crooked Man."
+            "(credit: MovieInsider)"
         )
     elif parts == 3:
         return (
-            "Stars: Margot Robbie, Aubrey Plaza\n\n"
-            "In this fresh coming-of-age story, an 18th birthday mushroom trip brings free-spirited Elliott (Maisy Stella) face-to-face with her wisecracking 39-year-old self (Aubrey Plaza). "
-            "But when Elliott’s “old ass” starts handing out warnings about what her younger self should and shouldn’t do, Elliott realizes she has to rethink everything about family, love, "
-            "and what’s becoming a transformative summer."
+            "Stars:Mercy Aigbe, Tobi Bakare,, Femi Branch\n\n"
+            "A wealthy lonely farmer with no surviving family saves for his late brother's widow Morenike and her son Femi, who decides to marry a young bride Funmi from the neighbouring village. "
+            "Funmi who is supposed to sooth Odun's aging nerves and bring him joy in his old age sinks into grief and despair, resenting her husband through this union arranged by her mother Tundun, she had no say in "
+            "(credit: Silverbird)"
         )
     elif parts == 4:
         return (
-            "Stars: Naomi Grossman, Parker Brennon\n\n"
-            "Following a young girl, Venus, who decides to run away from home, but their journey is cut short when their older sister, Jazmin, spots them wheeling a suitcase down the sidewalk. "
-            "Jazmin then takes Venus on a journey around town, where she tells supernatural tales in which the characters have more in common with Venus than they first realize."
+            "Stars: Harriet Akintola, Bimbo Akintola, Chris Akwarandu\n\n"
+            "Set in 2005, the story unravels one fateful night when everything changes in the blink of an eye. It is a gripping drama that explores themes of love, friendship, and family."
+            "(credit: BellaNaija)"
         )
     elif parts == 5:
         return (
-            "Stars: Halle Berry, Shawn Levy, Alexandre Aja\n\n"
-            "A family has been haunted by an evil spirit for years. Their safety and surroundings come into question when one of the children questions if the evil is real."
+            "Stars: Tom Hardy, Juno Temple\n\n"
+            "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance"
+            "(credit: IMDB)"
         )
     else:
         return "This is everything"
