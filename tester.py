@@ -209,7 +209,7 @@ fig = px.bar(
 st.plotly_chart(fig)
 
 # Blog section
-st.markdown("<h2 id='blog'>Blog</h2>", unsafe_allow_html=True)
+st.markdown("<h2 id='blog'>Articles</h2>", unsafe_allow_html=True)
 blogs = [
     {'title': blog_title(1), 'content': blog_details(1)},
     {'title': blog_title(2), 'content': blog_details(2)},
