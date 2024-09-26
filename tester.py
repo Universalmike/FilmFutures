@@ -179,7 +179,7 @@ if submit_button:
 # Upcoming movies
 st.markdown("<h2 id='upcoming-movies'>Upcoming Movies</h2>", unsafe_allow_html=True)
 upcoming_movies = [
-    {'title': movie_details[1], 'content': movie_info[1]},
+    {'title': movie_details(1), 'content': movie_info(1)},
     {'title': movie_details(2), 'content':  movie_info(2)},
     {'title': movie_details(3), 'content': movie_info(3)},
     {'title': movie_details(4), 'content': movie_info(4)},
