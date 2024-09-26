@@ -139,10 +139,10 @@ if movie_title:
     if movie_details:
         # Auto-fill other fields with corresponding details
         release_date = movie_data.get('release_date', 'N/A')
-        genres = ', '.join([genre['name'] for genre in movie_data.get('genres', [])]) if movie_details.get('genres') else 'Unknown'
+        genres = ', '.join([genre['name'] for genre in movie_data.get('genres', [])]) if movie_data.get('genres') else 'Unknown'
         runtime = movie_data.get('runtime', 'Unknown')
-        production_countries = ', '.join([country['name'] for country in movie_details.get('production_countries', [])]) if movie_data.get('production_countries') else 'Unknown'
-        age_certification = movie_data.get('certification', 'N/A') if 'certification' in movie_details else 'Unknown'
+        production_countries = ', '.join([country['name'] for country in movie_data.get('production_countries', [])]) if movie_data.get('production_countries') else 'Unknown'
+        age_certification = movie_data.get('certification', 'N/A') if 'certification' in movie_data else 'Unknown'
         
         
         st.text_input('Release Date:', value=release_date)
