@@ -108,10 +108,10 @@ def blog_details(blogs):
 def movie_cover(parted):
     # Replace with actual URLs for movie covers
     cover_urls = {
-        1: "FilmFutures/christmas.jpg",
-        2: "FilmFutures/mufasa.jpg",
-        3: "FilmFutures/nosferatu.jpg",
-        4: "FilmFutures/LOTR2.jpg",
-        5: "FilmFutures/sevendoors.jpg",
+        1: "christmas.jpg",
+        2: "mufasa.jpg",
+        3: "nosferatu.jpg",
+        4: "LOTR2.jpg",
+        5: "sevendoors.jpg",
     }
     return cover_urls.get(parted, "C:/Users/BABA/DEFAUL.png")
