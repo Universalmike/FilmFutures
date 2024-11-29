@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 import pickle
 import requests
-from Ddetails import movie_details, movie_info, blog_title, blog_details
+from Ddetails import movie_details, movie_info, blog_title, blog_details, movie_cover
 
 types = ['MOVIE', 'SHOW']
 
@@ -179,15 +179,24 @@ if submit_button:
 # Upcoming movies
 st.markdown("<h2 id='upcoming-movies'>Upcoming Movies</h2>", unsafe_allow_html=True)
 upcoming_movies = [
-    {'title': movie_details(1), 'content': movie_info(1)},
-    {'title': movie_details(2), 'content':  movie_info(2)},
-    {'title': movie_details(3), 'content': movie_info(3)},
-    {'title': movie_details(4), 'content': movie_info(4)},
-    {'title': movie_details(5), 'content': movie_info(5)}
+    {'title': movie_details(i), 'content': movie_info(i), 'cover': movie_cover(i)} 
+    for i in range(1, 6)
 ]
+
+# Display movies row by row
 for movie in upcoming_movies:
-    if st.button(movie['title']):
-        st.markdown(f"<div class='upcoming-movies'>{movie['content']}</div>", unsafe_allow_html=True)
+    # Use columns for layout
+    col1, col2 = st.columns([3, 1])  # Adjust column widths as needed
+    
+    # Title on the left
+    with col1:
+        st.markdown(f"### {movie['title']}")
+        with st.expander("View Details"):
+            st.markdown(movie['content'])
+    
+    # Image on the right
+    with col2:
+        st.image(movie['cover'], use_column_width=True)
 
 # Top rated movies
 st.markdown("<h2 id='top-rated-movies'>Top Rated Movies in Each Country</h2>", unsafe_allow_html=True)
@@ -196,8 +205,15 @@ country_movie_data = [
     {'country': 'UK', 'movies': [{'title': 'Monkey Man', 'rating': 6.9}, {'title': 'Kill', 'rating': 7.9}, {'title': 'Alien: Romulus', 'rating': 7.4}, {'title': 'Kneecap', 'rating': 7.6}, {'title': 'Supacell', 'rating': 7.0}]},
     {'country': 'Nigeria', 'movies': [{'title': 'The Silent Intruder', 'rating': 9.4}, {'title': 'Funmilayo Ransome-Kuti', 'rating': 8.7}, {'title': "All's Fair In Love", 'rating': 6.4}, {'title': 'Japa', 'rating': 7.3}]}
 ]
-country_index = st.number_input('Select Country Index:', min_value=0, max_value=len(country_movie_data)-1, value=0)
-country_data = country_movie_data[country_index]
+# Dropdown to select a country
+country_names = [data['country'] for data in country_movie_data]
+selected_country = st.selectbox('Select a Country to View Top-Rated Movies:', country_names)
+
+# Filter data for the selected country
+for country_data in country_movie_data:
+    if country_data['country'] == selected_country:
+        movies_df = pd.DataFrame(country_data['movies'])
+        break
 fig = px.bar(
     pd.DataFrame(country_data['movies']),
     x='title',
