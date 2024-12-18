@@ -85,24 +85,67 @@ def blog_details(blogs):
         return "Movies have a profound impact on society, shaping cultural norms, influencing public opinion, and reflecting social issues.\n They serve as a powerful medium for storytelling, bringing diverse perspectives and fostering empathy.\nThrough their portrayal of characters, conflicts, and resolutions, films can inspire change, challenge stereotypes, and raise awareness about critical topics.\nAdditionally, movies offer a shared experience that unites audiences, sparking conversations and collective emotions.\nIn essence, cinema not only entertains but also educates and motivates, leaving a lasting imprint on societal values and individual lives."
     elif blogs == 2:
         return (
-            "If you’re in the mood for a pulse-pounding thriller, look no further than The Mirage Heist. Directed by Guy Ritchie, this stylish film brings together a team of world-class thieves in a daring mission to steal a priceless artifact hidden within an impenetrable desert fortress."
-            "Leading the team is Eva Rook, an enigmatic mastermind played by Ana de Armas, who brings her A-game in this role filled with cunning, charisma, and unexpected depth. The crew must navigate a maze of shifting sand dunes, deceptive mirages, and ruthless mercenaries guarding the treasure. As they delve deeper into the fortress, deadly traps and unforeseen betrayals challenge their resolve, pushing each member to confront their own personal demons."
-            "With Henry Cavill, Rami Malek, and Lupita Nyong’o adding their talents to the cast, The Mirage Heist offers a blend of intricate heist elements and heart-stopping action sequences set against the exotic backdrop of the desert. Guy Ritchie’s signature style of fast-paced storytelling and sharp dialogue ensures this film will be a rollercoaster ride from start to finish."
-            "Why You Should Watch:\n\n"
-            "- A thrilling plot with complex characters and high stakes. \n\n"
-            "- Exhilarating action scenes set in stunning desert landscapes. \n\n"
-            "- An exceptional cast delivering top-notch performances."
+            """
+            
+            **Jason Chambers Opens Up About His Melanoma Diagnosis**
+            Jason Chambers, star of Below Deck Down Under, recently shared his health journey with fans. While in Bali, he underwent a biopsy and received a diagnosis of melanoma, a type of skin cancer.
+
+            When Jason returned to Australia, doctors recommended further tests to assess his condition.
+
+            In a video shared on Instagram on December 16, Captain Jason revealed that he has stage two melanoma. He explained, “The doctors in Australia, who are amazing, weren’t satisfied with the initial findings. They recommended removing a larger area and testing the lymph nodes.”
+
+            Stage two melanoma means the cancer has grown deeper into the skin, making it more serious. It often requires more extensive treatment, especially if it’s on the face.
+
+            **Raising Awareness Among Fans**
+            Jason also used the opportunity to warn his fans about the risks of melanoma. “In Australia, two out of three people will deal with melanoma at some point,” he shared, highlighting how common it is in the country.
+
+            Worldwide, the risk of melanoma is much lower, but in Australia, it’s significantly higher, with estimates suggesting around 1 in 17 people might be affected.
+
+            Jason admitted he hadn’t always been careful about sun protection. “I didn’t use sunscreen much when I was on the boat,” he said. He explained that he used to apply zinc only to his nose, mainly because he was concerned about the chemicals in sunscreen.
+
+            Now, he encourages people to explore the many chemical-free options available. “There are so many great products out there now,” he added.
+
+            **A Personal Reflection**
+            In his Instagram caption, Jason shared how he underestimated the sun’s effects. “I’ve spent my life in the sun—playing sports as a kid and working on the ocean. I thought I was immune to its damage,” he wrote.
+
+            While he acknowledged the sun’s health benefits, he emphasized the importance of moderation and protection. “It’s all about balance,” Jason said.
+
+            He also stressed the value of early detection. “What I thought was just a skin spot changed within six months. Early detection is so important,” he urged.
+            
+            """
         )
     elif blogs == 3:
         return (
-            "Prepare for a cosmic journey like no other! The Astral Crusade is an epic space adventure that brings together an all-star cast in a battle for humanity's survival against a mysterious alien force. The story centers on Captain Lena Corvus, portrayed by Zoë Kravitz, a seasoned astronaut with a tumultuous past who is tasked with leading a diverse crew on a mission beyond the known universe."
-            "With groundbreaking technology at their disposal, they must navigate treacherous galaxies, uncover hidden worlds, and unravel ancient secrets to prevent an interstellar catastrophe. But with tensions running high and trust becoming a rare commodity among the crew, Captain Corvus faces the ultimate test of leadership and courage."
-            "Directed by Denis Villeneuve, known for his visually spectacular films and gripping storytelling, The Astral Crusade promises an unforgettable cinematic experience, combining breathtaking visual effects with a compelling narrative of survival and discovery. The movie also features Michael B. Jordan, Idris Elba, and Oscar Isaac, making it one of the most anticipated releases of the year."
-            "Why You Should Watch:\n\n" 
-            "- Stunning visual effects and state-of-the-art CGI. \n\n"
-            "- A suspenseful storyline filled with unexpected twists. \n\n"
-            "- A powerhouse cast that delivers intense and memorable performances."
+            """
+            
+            **Jamie Foxx Updates Fans After Scary Incident**
+            Jamie Foxx is sharing an update with fans following an incident at his birthday dinner that left him needing medical attention.
+
+            The actor and comedian, who previously faced a serious health scare last year, found himself dealing with another emergency. Over the weekend, someone reportedly threw a glass at his face during his celebration.
+
+            **What Happened at Jamie Foxx’s Birthday Dinner?**
+            Jamie Foxx turned 57 on Friday, December 13, and marked the occasion with a birthday dinner. However, the celebration took a shocking turn when someone allegedly threw a glass at him, hitting him in the mouth.
+
+            Foxx’s spokesperson confirmed the incident, saying he required stitches but is now recovering.
+
+            **Jamie Thanks Fans for Their Support**
+            Following the ordeal, Foxx took to Instagram to reassure his fans. His post read: “The devil is busy, but I’m too blessed to be stressed.” In the caption, he added, “The devil is a lie,” though the meaning of his words remains unclear.
+
+            Foxx expressed gratitude to his supporters, saying, “Thank you to everybody that prayed and checked on me.” Reflecting on the situation, he wrote, “When your light shines bright, they try to bring you darkness. But they don’t know you’re built for it.”
+
+            **A Shoutout to His Netflix Special**
+            In his Instagram message, Jamie also thanked fans for supporting his Netflix comedy special, What Had Happened Was, which is currently ranked number one on the platform. “It’s from my heart and my soul,” he shared, encouraging anyone who hasn’t seen it to check it out.
+
+            **Details About the Incident**
+            According to Jamie’s representative, the incident required him to get stitches. The Beverly Hills Police Department responded to calls from the restaurant but determined it was a “physical altercation” rather than an assault with a deadly weapon. No arrests were made.
+
+            While fans are eager for more answers, many are relieved to hear that Foxx is recovering and in good spirits.
+
+
+            
+            """
         )
+
 
 
 def movie_cover(parted):
@@ -115,3 +158,13 @@ def movie_cover(parted):
         5: "sevendoors.jpg",
     }
     return cover_urls.get(parted, "C:/Users/BABA/DEFAUL.png")
+
+def blog_pics(pic):
+    # Replace with actual URLs for movie covers
+    pic_urls = {
+        1: "movie.jpg",
+        2: "https://cdn.thehollywoodgossip.com/uploads/2024/12/1217_captainjason_03-728x410.png",
+        3: "https://cdn.thehollywoodgossip.com/uploads/2024/12/1215_jamiefoxx_04-768x512.jpg"
+    }
+    return pic_urls.get(pic, "C:/Users/BABA/DEFAUL.png")
+
