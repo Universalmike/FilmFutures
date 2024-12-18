@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 import pickle
 import requests
-from Ddetails import movie_details, movie_info, blog_title, blog_details, movie_cover
+from Ddetails import movie_details, movie_info, blog_title, blog_details, movie_cover, blog_pics
 
 types = ['MOVIE', 'SHOW']
 
@@ -227,13 +227,23 @@ st.plotly_chart(fig)
 # Blog section
 st.markdown("<h2 id='blog'>Articles</h2>", unsafe_allow_html=True)
 blogs = [
-    {'title': blog_title(1), 'content': blog_details(1)},
-    {'title': blog_title(2), 'content': blog_details(2)},
-    {'title': blog_title(3), 'content': blog_details(3)}
+    {'title': blog_title(i), 'details': blog_details(i), 'cover': blog_pics(i)} 
+    for i in range(1, 4)
 ]
+
 for blog in blogs:
-    if st.button(blog['title']):
-        st.markdown(f"<div class='blog'>{blog['content']}</div>", unsafe_allow_html=True)
+    # Blog Title
+    st.markdown(f"### {blog['title']}")
+
+    # Blog Image (center aligned)
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button(f"View Details {blog['title']}", key=blog['title']):
+            with st.expander("Details", expanded=True):
+                st.image(blog['cover'], use_column_width=True)
+                st.markdown(blog['details'])
+
+    st.markdown("<hr>", unsafe_allow_html=True)  # Add a separator
 
 # Contact Us section
 st.markdown("<h2 id='contact-us'>Contact Us</h2>", unsafe_allow_html=True)
